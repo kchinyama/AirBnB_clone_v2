@@ -42,6 +42,7 @@ def isNumber(n):
     """displays number if number has been passed as argument"""
     return f"{n} is a number"
 
+
 @app.route("/number_template/<int:n>", strict_slashes=False)
 def numberTemplate(n):
     """displays html page if n is a digit"""
