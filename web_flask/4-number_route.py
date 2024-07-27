@@ -37,12 +37,10 @@ def hbnbPython(text):
     return f"Python {textStr}"
 
 
-@app.route('/number/<n>', strict_slashes=False)
+@app.route("/number/<int:n>", strict_slashes=False)
 def isNumber(n):
     """displays number if number has been passed as argument"""
-    if n.isdigit():
-        return f"{n} is a number"
-
+    return f"{n} is a number"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
